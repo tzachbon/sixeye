@@ -1,0 +1,115 @@
+$primary: #067d9c;
+$accent: #1f2534;
+
+$main-color: (50: #e3f5f7,
+  100: #b8e5ec,
+  200: #89d4e0,
+  300: #5ac2d3,
+  400: #36b5c9,
+  500: #13a8c0,
+  600: #11a0ba,
+  700: #0e97b2,
+  800: #0b8daa,
+  900: #067d9c,
+  A100: #c8f2ff,
+  A200: #95e6ff,
+  A400: #62daff,
+  A700: #48d4ff,
+  contrast: (50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  ));
+
+
+$second-color: (50 : #e4e5e7,
+  100 : #bcbec2,
+  200 : #8f929a,
+  300 : #626671,
+  400 : #414652,
+  500 : #1f2534,
+  600 : #1b212f,
+  700 : #171b27,
+  800 : #121621,
+  900 : #0a0d15,
+  A100 : #5887ff,
+  A200 : #2563ff,
+  A400 : #0045f1,
+  A700 : #003dd7,
+  contrast: (50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  ));
+
+
+
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$sdc-robots-accent              : mat-palette($main-color);
+$sdc-robots-primary             : mat-palette($second-color);
+
+// The warn palette is optional (defaults to red).
+$sdc-robots-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$sdc-robots-theme: mat-light-theme($sdc-robots-primary, $sdc-robots-accent, $sdc-robots-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($sdc-robots-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin     : 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+
+
+.component-display {
+  width        : inherit;
+  height       : inherit;
+  border-radius: inherit;
+  overflow     : hidden;
+}

@@ -1,0 +1,14 @@
+:host {
+}
+
+.obstacle {
+  position        : absolute;
+  background-color: rgb(245, 245, 245);
+  top             : 0;
+  left            : 0;
+  border-radius   : .3rem;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+
+}

@@ -1,0 +1,17 @@
+<div
+  class="map"
+  #factoryMap
+>
+  <ng-container *ngFor="let obstacle of getStaticObstacles()">
+    <app-static-obstacle [staticObstacle]="obstacle"></app-static-obstacle>
+  </ng-container>
+  <ng-container *ngFor="let station of getStaticStations()">
+    <app-static-station [staticStation]="station"></app-static-station>
+  </ng-container>
+  <ng-container *ngFor="let shape of getExtraShapes()">
+    <app-extra-shape [extraShape]="shape"></app-extra-shape>
+  </ng-container>
+  <ng-container *ngFor="let obstacle of getDynamicObstacles().dynamicObstacles">
+    <app-dynamic-obstacle [dynamicObstacle]="obstacle"></app-dynamic-obstacle>
+  </ng-container>
+</div>

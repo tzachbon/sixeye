@@ -1,0 +1,26 @@
+.station {
+  position        : absolute;
+  border-radius   : 2px;
+  background-color: #BCE2FF;
+  box-shadow      : 1px 1px 0 0 #D6DCE7;
+  display         : flex;
+  justify-content : center;
+  align-items     : flex-start;
+
+  .combined-shape {
+    border          : 1px solid #A2C5E3;
+    padding         : .3rem;
+    border-radius   : 3px;
+    background-color: #FFFFFF;
+    margin-top      : -1rem;
+
+    .s {
+      color      : #1C3256;
+      font-family: "Noto Sans";
+      font-size  : 14px;
+      font-weight: 500;
+      line-height: 19px;
+      text-align : center;
+    }
+  }
+}

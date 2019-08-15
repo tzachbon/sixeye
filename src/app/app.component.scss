@@ -1,0 +1,56 @@
+@import '../styles.scss';
+
+.grid-container {
+  position       : relative;
+  height         : 100%;
+  width          : 100%;
+  background     : linear-gradient(to bottom, $accent, darken($accent, 10%));
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+
+  .display {
+    background-color   : #eee;
+    grid-area          : display;
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
+    border-radius      : .3rem;
+    width              : 50vw;
+    opacity            : 0;
+    box-shadow         : 0 .5rem 1rem 0 rgb(109, 109, 109);
+    animation          : OpenAnimation 1s ease-in-out;
+    animation-fill-mode: forwards;
+    height             : 50vh;
+
+    // &>* {
+    //   &+* {
+    //     width: 100%;
+    //   }
+    // }
+
+  }
+}
+
+
+
+
+
+
+@media all and (-ms-high-contrast:none) {}
+
+@keyframes OpenAnimation {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    width  : 50vw;
+    opacity: 1;
+
+  }
+}
